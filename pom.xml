@@ -554,4 +554,22 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>openshift</id>
+            <build>
+                <finalName>${project.artifactId}</finalname>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactid>
+                        <version>2.1.1</version>
+                        <configuration>
+                            <outputDirectory>webapps</outputdirectory>
+                            <warName>ROOT</warname>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles> 
 </project>
